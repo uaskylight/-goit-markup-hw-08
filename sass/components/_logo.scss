@@ -1,0 +1,42 @@
+    ////////// Photo////////
+
+.photo {
+    display: block;
+    max-width: 100%;
+
+    @media screen and (max-width:768px) {
+        display: inline;
+    } 
+}
+
+    //////////Logo//////////
+
+
+.logo{
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    align-items: center;
+
+    @include fonts (700, 26px, 1.19, null);
+    color: $logo-stydio-header;
+    &--blue {
+        color: $logo-web;
+    }
+    &--white {
+        color: $logo-footer;
+        margin-bottom: 20px;
+    }
+}
+
+.logo_header{
+    margin-right: 93px;
+
+    @media screen and (max-width:1199px) {
+        margin-right: 88px;
+    }
+}
+
+.logo_footer{
+    display: inline-block;
+    align-items: center;
+}
