@@ -2,26 +2,42 @@
 //////////header//////////
 
 .header-line {
+    // position: relative;
     border-bottom: 1px solid $line;
 }
-.container__flex,
-.navigation {
+.container__flex {
     position: relative;
     display: flex;
+    @media screen and(max-width: 767px){
+        padding: 16px 15px;
+    }
+}
+.navigation{
+    // display: flex;
+    @media screen and(max-width: 479px){
+        margin-bottom: 210px;
+    }
+    @media screen and(min-width: 480px)and(max-width: 767px){
+        margin-bottom: 302px;
+    }
 }
 
-.navigation-contacts-header{
-    display: flex;
-}
+// .navigation-contacts-header{
+//     display: flex;
+// }
 
 .navigation__menu {
-     @media screen and(max-width: 767px) {
-        display: none;
-    }
     @include centeredFlex();
-
+    // margin-right: 50px;
     & :not(:last-child) {
         margin-right: 50px;
+    }
+      @media screen and(max-width: 767px) {
+        display: grid;
+        display: inline;
+             & :not(:last-child) {
+        margin-right: 0;
+    }
     }
 } 
 
@@ -36,6 +52,18 @@
         height: 4px;
         bottom: -1px;
         left: 0;
+         @media screen and(max-width:767px) {
+         display: none;
+        }
+    }  
+}
+.navigation__item{
+
+    @media screen and(max-width:767px) {
+            &:not(:first-child){
+                margin-top: 30px;
+}
+        
     }
 }
 .navigation__btn {
@@ -43,26 +71,39 @@
     color: $primary-color;
     padding: 32px 0;
     @include fonts (500, 14px, 1.14, 0.02em );
-
-    @media screen and(max-width: 767px) {
-        display: none;
-    }
     
+    @media screen and(max-width: 767px) {
+        @include fonts (500, 40px, 1.17, 0.02em );
+       padding:0;
 }
-
+}
+.header-navigation-contacts{
+    display: flex;
+}
 .navigation-contacts {
     margin-left: auto;
+    display: flex;
 
-    @media screen and(max-width: 767px) {
-        display: none;
-    }
-    @media screen and(max-width: 1199px) {
-        padding: 16px 0;
+    @media screen and (max-width:1199px) {
+        display: inline;
     }
 
-    @media screen and(min-width: 1200px) {
-        display: flex;
+     @media screen and (max-width:767px) {
+        display:inline-flex;
+        flex-direction: column-reverse;
+        margin-bottom: 63px;
     }
+
+    // @media screen and(max-width: 767px) {
+    //     display: none;
+    // }
+    // @media screen and(max-width: 1199px) {
+    //     padding: 16px 0;
+    // }
+
+    // @media screen and(min-width: 1200px) {
+    //     display: flex;
+    // }
 
     & :not(:last-child) {
 
@@ -74,31 +115,68 @@
     &--email {
         width: 16px;
         height: 12px;
+        @media screen and(max-width:767px){
+            display: none;
+        }
     }
     &--tell {
         width: 10px;
         height: 16px;
+          @media screen and(max-width:767px){
+            display: none;
+        }
     }
 }
 .navigation-contacts_item{
-    @media screen and(max-width:1199px) {
+    
+    @media screen and(max-width:767px) {
+        &:not(:first-child){
+         margin-bottom:32px;
+        }
+          &:not(:last-child){
+         margin-bottom:0;
+        }
+    }
+    @media screen and(max-width:767px) {
+        &:not(:last-child){
+         margin-bottom:0;
+        }
+    }
+     @media screen and(min-width:768px)and(max-width:1199px) {
         &:not(:last-child){
          margin-bottom:10px;
         }
     }
 }
 
+
 .navigation-contacts__top {
-      @media screen and(max-width: 1199px) {
-        padding: 0;
-    }
     @include fonts (500, null, 1.14, 0.02em );
     @include centeredFlex(inline-flex);
     padding: 32px 0;
     color: $secondary-color;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+
+      @media screen and(max-width: 1199px) {
+        padding: 0;
+    }
+}
+.navigation-contacts__top--MobileFonsTell{
+    @media screen and(max-width: 479px){
+        @include fonts (500, 22px, 1.81, 0.02em );
+        color:$logo-web;
+    }
+    @media screen and(min-width: 480px) and(max-width: 767px) {
+        @include fonts (500, 34px, 1.17, 0.02em );
+        color:$logo-web;
+    }
+}
+.navigation-contacts__top--MobileFonsEmail{
+    @media screen and(max-width: 479px){
+        @include fonts (500, 16px, 1.75, 0.02em );
+    }
+    @media screen and(min-width: 480px) and (max-width: 767px) {
+        @include fonts (500, 24px, 1.16, 0.02em )
+    }
 }
 
 .navigation-contacts__svg {
@@ -112,9 +190,9 @@
 }
 
 
-.menu-container__navigation,
-.menu-container__contacts{
-    width: 50px;
-    height:50px;
-    outline: 1px solid red;
-}
+// .menu-container__navigation,
+// .menu-container__contacts{
+//     width: 50px;
+//     height:50px;
+//     outline: 1px solid red;
+// }

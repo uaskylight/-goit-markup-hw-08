@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title lang="en">WebStudio</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/logo/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -23,30 +23,30 @@
   <header class="header-line">
     <div class="container container__flex">
       <a href="./index.html" class="logo logo_header list-style" lang="en"><span class="logo--blue">Web</span>Studio</a>
-      <div class="navigation-contacts-header">
+      <div class="menu-container" id="menu-container" data-menu>
               <nav class="navigation">
                 <ul class="navigation__menu list-style">
-                  <li class="navigation__lineBlue">
+                  <li class="navigation__item navigation__lineBlue">
                     <a href="./index.html" class="link navigation__btn navigation__lineBlue--active current">Студія</a>
                   </li>
-                  <li>
+                  <li class="navigation__item">
                     <a href="./portfolio.html" class="link navigation__btn">Портфоліо</a>
                   </li>
-                  <li>
+                  <li class="navigation__item">
                     <a href="#" class="link navigation__btn">Контакти</a>
                   </li>
                 </ul>
               </nav>
               <ul class="navigation-contacts list-style">
                 <li class="navigation-contacts_item">
-                  <a href="mailto:info@devstudio.com" class="link navigation-contacts__top">
+                  <a href="mailto:info@devstudio.com" class="link navigation-contacts__top navigation-contacts__top--MobileFonsEmail">
                     <svg class="navigation-contacts__svg navigation-contacts--email">
                       <use href="./images/svg/symbol-defs.svg#icon-envelope">
                       </use>
                     </svg>info@devstudio.com</a>
                 </li>
                 <li class="navigation-contacts_item">
-                  <a href="tel:+380961111111" class="link navigation-contacts__top">
+                  <a href="tel:+380961111111" class="link navigation-contacts__top navigation-contacts__top--MobileFonsTell">
                     <svg class="navigation-contacts__svg navigation-contacts--tell">
                       <use href="./images/svg/symbol-defs.svg#icon-smartphone">
                       </use>
@@ -54,6 +54,22 @@
                   </a>
                 </li>
               </ul>
+              <div class="social-network">
+                <ul class="social-network__list link list-style">
+                  <li class="social-network__item">
+                    <a href="#" class="link  social-network__link">Instagram</a>
+                  </li>
+                  <li class="social-network__item">
+                    <a href="#" class="link social-network__link">Twitter</a>
+                  </li>
+                  <li class="social-network__item">
+                    <a href="#" class="link social-network__link">Facebook</a>
+                  </li>
+                  <li class="social-network__item">
+                    <a href="#" class="link social-network__link">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
       </div>
               <button type="button" class="btn-menu-mobile is-open" aria-expanded="false" aria-controls="btn-menu-mobile " data-menu-button>
                 <svg width="40" height="40" aria-label="перемикач мобільного меню">
@@ -61,7 +77,10 @@
                   <use class="icon-close-mobile" href="./images/svg/symbol-defs.svg#menu-close_mobile"></use>
                 </svg>
               </button>
-              <!-- <div class="menu-container" id="menu-container" data-menu></div> -->
+              
+              <!-- <div class="menu-container" id="menu-container" data-menu>
+                hghghghghgh
+              </div> -->
     </div>
   </header>
   <main>

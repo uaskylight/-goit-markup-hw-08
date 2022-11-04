@@ -18,12 +18,20 @@
 
 }
 
-//   //////////work-portfolio//////////
+  //////////work-portfolio//////////
 
 .work-portfolio{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+   
+  @media screen and(min-width:780px) {
+    justify-content: flex-start;
+  }
+   
+
+  
 
     &__frame {
       position: relative;
@@ -67,20 +75,26 @@
   }
 
   &__list {
-      @media screen and(max-width:479px) {
+      @media screen and(max-width:767px) {
       width: 100%;
       margin: 0;
-      margin: 0;
     }
+      @media screen and (min-width:768px)and (max-width:1199px) {
+        width: calc((100% - 15px)/2);
+        height: auto;
+        
+     
+    } 
+    
   }
 
-  &__list:not(:nth-last-child(3n + 1)) {
-    margin-right: 30px;
-        @media screen and(max-width:479px) {
-      width: 100%;
-      margin-right: 0;
-    }
-  }
+  // &__list:not(:nth-last-child(3n + 1)) {
+  //   margin-right: 30px;
+  //       @media screen and(max-width:767px) {
+  //     width: 100%;
+  //     margin-right: 0;
+  //   }
+  // }
 
 
 
