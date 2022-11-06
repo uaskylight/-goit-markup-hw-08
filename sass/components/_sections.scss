@@ -11,7 +11,7 @@
     margin-bottom: 30px;
     color: $container;
     text-transform: uppercase;
-    @include fonts(900, 44px, 1.36, 0.06em);
+    @include fonts(900, 42px, 1.36, 0.06em);
 
     @media screen and (max-width: 767px) {
       @include fonts(900, 26px, 1.61, 0.06em);
