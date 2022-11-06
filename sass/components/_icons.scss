@@ -1,38 +1,32 @@
-
-    
-    //////////Icon//////////
-
+//////////Icon//////////
 
 .svg-icon-link {
-    @include centeredFlex();
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: $network;
-    transition: background-color $transition-background-color,
-        color $transition-background-color;
-        background-color: rgba(255, 255, 255, 0.1);
+  @include centeredFlex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $network;
+  transition: background-color $transition-background-color,
+    color $transition-background-color;
+  background-color: rgba(255, 255, 255, 0.1);
 
-    &:hover,
-    &:focus {
-        background-color: $logo-web;
-        color: $btn;
-    }
+  &:hover,
+  &:focus {
+    background-color: $logo-web;
+    color: $btn;
+  }
 }
 
 .svg-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 
-    &:hover {
-        fill: currentColor;
-    }
+  &:hover {
+    fill: currentColor;
+  }
 }
 
 .icon-send {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-
-
-

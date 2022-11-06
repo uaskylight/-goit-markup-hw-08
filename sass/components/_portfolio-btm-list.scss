@@ -1,61 +1,53 @@
-    
-    //////////menu-portfolio//////////
+////////// menu-portfolio //////////
 
 .menu-portfolio {
-    // display: block;
 
-    &__item {
-          @media screen and (min-width: 1200px){
-             margin-bottom: 50px;
-             @include centeredFlex();
-             flex-wrap: wrap;
-             gap: 8px;
-             
-        }
-         @media screen and (min-width: 768px){
-             @include centeredFlex();;
-             gap: 8px;
-         }
-        @media screen and (max-width: 1199px){
-             margin-bottom: 30px;
-        }
-        @media screen and (max-width: 767px){
-             margin-bottom: 40px;
-             display: flex;
-             flex-wrap: wrap;
-             gap: 8px;
-        }
+  &__item {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      @include centeredFlex();
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+      @include centeredFlex();
+      gap: 8px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
   }
-      &__list{
+ 
+  &__btn {
+    @include fonts(500, 16px, 1.62, null);
+    background-color: $our-team-nav-prtf;
+    color: $btn-prtf;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    padding: 6px 22px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: $primary-btn-color;
+    color: $btn;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.12);
+  }
+  &__btn:focus {
+    outline: 1px solid $bgr-color;
+  }
 }
-    
-    &__btn {
-        @include fonts (500, 16px, 1.62, null );
-        background-color: $our-team-nav-prtf;
-        color: $btn-prtf;
-        font-family: inherit;
-        cursor: pointer;
-        border-radius: 4px;
-        border: 0;
-        padding: 6px 22px;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-  
-
-    &__btn:hover,
-    &__btn:focus {
-        background-color: $primary-btn-color;
-        color: $btn;
-        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.12);
-    }
-    &__btn:focus{
-        outline: 1px solid $bgr-color;
-    }
-}
-
-
-
-
-
