@@ -5,8 +5,22 @@
  }
 
  @mixin fonts ($fw, $fs, $lh, $ls){
-   font-weight: $fw;
-   font-size: $fs;
-   line-height: $lh;
-   letter-spacing: $ls;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
  }
+
+ ////////// hero //////////
+ 
+ @mixin background (){
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-grow: 1;
+}
+
+
+
+//  @media screen and (min-device-pixel-ratio: 2),
+//     screen and (min-resolution: 192dpi),
+//     screen and (min-resolution: 2dppx

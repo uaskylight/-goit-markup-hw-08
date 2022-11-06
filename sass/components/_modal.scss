@@ -106,8 +106,6 @@
 }
 
 .form-checkbox {
-  @include centeredFlex(inline-block);
-
   &__close {
     position: absolute;
     @include centeredFlex();
@@ -187,12 +185,15 @@
   }
 
   &__policy {
-    @include centeredFlex();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include fonts(null, 12px, 1.16, null);
     @media screen and(max-width:479px) {
-      display: inline;
+      display: inline-block;
     }
-    @media screen and(max-width:767px) {
-      @include fonts(null, 12px, 1.16, null);
+    @media screen and(min-width:480px) {
+      align-items: flex-end;
     }
   }
 

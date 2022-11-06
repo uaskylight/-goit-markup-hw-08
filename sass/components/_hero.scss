@@ -5,25 +5,21 @@
   padding-bottom: 118px;
 
   max-width: 480px;
-  height: 400px;
-
   background-color: $background-hero;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+  background-image: $linear-gradient,
     url(../images/hero/hero_480x400.jpg);
+  @include background();
+  background-size: 480px 400px;
 }
+
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
     background-color: $background-hero;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
+    background-image: $linear-gradient,
       url(../images/hero/hero@2_960x800.png);
+    @include background();
     background-size: 480px 400px;
   }
 }
@@ -31,13 +27,10 @@
 @media screen and (min-width: 481px) {
   .hero {
     max-width: 768px;
-    height: 400px;
     background-color: $background-hero;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
+    background-image: $linear-gradient,
       url(../images/hero/hero_768x400.png);
+    @include background();
     background-size: 768px 400px;
   }
 
@@ -46,11 +39,10 @@
     screen and (min-resolution: 2dppx) {
     .hero {
       background-color: $background-hero;
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
+      background-image: $linear-gradient,
         url(../images/hero/hero@2_1536x800.png);
+      @include background();
+      background-size: 1536px 800px;
     }
   }
 }
@@ -61,13 +53,11 @@
     padding-bottom: 200px;
     max-width: 1600px;
     margin: 0 auto;
-    height: 600px;
     background-color: $background-hero;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
+    background-image: $linear-gradient,
       url(../images/hero/hero_1600x600.png);
+    @include background();
+    background-size: 768px 400px;
     background-size: 1600px 600px;
   }
 
@@ -76,11 +66,10 @@
     screen and (min-resolution: 2dppx) {
     .hero {
       background-color: $background-hero;
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
+      background-image: $linear-gradient,
         url(../images/hero/hero@2_3200x1200.png);
+      @include background();
+      background-size: 3200px 1200px;
     }
   }
 }

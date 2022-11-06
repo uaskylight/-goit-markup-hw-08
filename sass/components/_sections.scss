@@ -16,6 +16,9 @@
     @media screen and (max-width: 767px) {
       @include fonts(900, 26px, 1.61, 0.06em);
     }
+    @media screen and (max-width: 379px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -66,10 +69,6 @@
   }
 
   &__text {
-    @media screen and(min-width:480px) {
-      text-align: center;
-    }
-
     @include fonts(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
   }
@@ -96,9 +95,16 @@
 ////////// work //////////
 
 .work {
-  @media screen and (max-width: 1200px) {
+  &__text{
+  color:var($primary-color);
+
+  @media screen and (max-width: 1199px) {
     display: none;
   }
+  @media screen and (min-width: 1200px) {
+    @include fonts(700, 36px, 1.16, null);
+  }
+}
 
   &__list {
     display: flex;
@@ -142,6 +148,18 @@
 ////////// our-team //////////
 
 .our-team {
+  &__list {
+    @media screen and(min-width:768px) and(max-width:1199px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @media screen and(min-width:1200px) {
+      display: flex;
+      gap: 30px;
+    }
+  }
   &__item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -157,7 +175,7 @@
     }
 
     @media screen and(min-width:768px) and(max-width:1199px) {
-      width: calc((100% - 15px) / 2);
+      width: calc((100% - 30px) / 2);
     }
   }
 
@@ -173,30 +191,17 @@
   }
 
   &__text {
-    @media screen and (max-width: 480px) {
-      @include fonts(null, 24px, 1.16, null);
-    }
-
-    @media screen and (min-width: 480px) {
-      @include fonts(null, 28px, 1.16, null);
+    color: $primary-color;
+    
+    @media screen and (max-width: 1199px) {
+      @include fonts(700, 28px, 1.17, null);
       margin-bottom: 30px;
     }
 
-    @include fonts(700, 36px, 1.16, null);
-  }
-
-  &__list {
-    @media screen and(min-width:768px) and(max-width:1199px) {
-      display: flex;
-      flex-wrap: wrap;
-      // margin: 0px -15px;
-      gap: 15px;
-    }
-
-    @media screen and(min-width:1200px) {
-      display: flex;
-      gap: 30px;
-    }
+    @media screen and (min-width: 1200px) {
+      @include fonts(700, 36px, 1.16, null);
+      margin-bottom: 50px;
+    } 
   }
 
   &__textjob {
@@ -228,19 +233,18 @@
 
 .clients {
   &__text {
-    @media screen and (min-width: 480px) {
-      @include fonts(null, 28px, 1.16, null);
-      margin-bottom: 30px;
-    }
-
-    @media screen and (max-width: 480px) {
-      @include fonts(null, 24px, 1.16, null);
-    }
-
-    @include fonts(null, 44px, 1.16, null);
     text-align: center;
     color: $primary-color;
     margin-bottom: 50px;
+    
+    @media screen and (max-width: 1199px) {
+    @include fonts(700, 28px, 1.17, null);
+      margin-bottom: 30px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+      @include fonts(700, 36px, 1.16, null);
+    } 
   }
 
   &__list {
