@@ -557,11 +557,11 @@ ul {
 }
 
 .header-line {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .container__flex {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1111,11 +1111,6 @@ ul {
   }
 }
 
-@media screen and (max-width: 479px) {
-  .about {
-    text-align: center;
-  }
-}
 .about__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1158,6 +1153,11 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .about__text {
+    text-align: center;
+  }
 }
 .about__title {
   color: #757575;

@@ -35,10 +35,6 @@
 //////////about//////////
 
 .about {
-  @media screen and (max-width: 479px) {
-    text-align: center;
-  }
-
   &__list {
     display: flex;
     gap: 30px;
@@ -69,6 +65,9 @@
   }
 
   &__text {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
     @include fonts(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
   }
